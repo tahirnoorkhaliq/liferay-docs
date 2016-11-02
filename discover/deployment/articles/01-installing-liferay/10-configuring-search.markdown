@@ -70,9 +70,12 @@ infrastructure.
 
 Once you have a copy of the right version of Elasticsearch, extract it to a
 folder on the machine where you want it running. That's all there is to this
-step. 
+step.
+### Step Three: Run these  commands 
+plugin install analysis-smartcn and plugin install analysis-kuromoji
+from the `[Elasticsearch Home]/bin` folder
 
-### Step Three: Name Your Elastic Cluster [](id=step-three-name-your-elastic-cluster)
+### Step Four: Name Your Elastic Cluster [](id=step-three-name-your-elastic-cluster)
 
 A *cluster* in Elasticsearch is a collection of nodes (servers) identified as a
 cluster by a shared cluster name. The nodes work together to share data and
@@ -107,7 +110,7 @@ Elastic starts, and one of its status messages includes a transport address:
 Take note of this address; you'll need to give it to your Liferay server so it
 can find Elastic on the network. 
 
-### Step Four: Configure Liferay to Connect to your Elastic Cluster [](id=step-four-configure-liferay-to-connect-to-your-elastic-cluster)
+### Step Five: Configure Liferay to Connect to your Elastic Cluster [](id=step-four-configure-liferay-to-connect-to-your-elastic-cluster)
 
 Now you're ready to configure Liferay. Start Liferay if you haven't already, log
 in, and then go to Control Panel &rarr; Configuration &rarr; System Settings
@@ -125,7 +128,7 @@ you started.
 
 When finished, click *Save*. You're almost done. 
 
-### Step Five: Restart Liferay and Reindex [](id=step-five-restart-liferay-and-reindex)
+### Step Six: Restart Liferay and Reindex [](id=step-five-restart-liferay-and-reindex)
 
 Stop and restart Liferay. When it's back up, log in as an administrative user
 and go to Control Panel &rarr; Configuration &rarr; Server Administration and
