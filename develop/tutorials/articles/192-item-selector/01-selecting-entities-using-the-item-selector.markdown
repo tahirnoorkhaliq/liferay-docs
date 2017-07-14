@@ -207,16 +207,14 @@ Selector dialog to work with selected items.
             function(event) {
                 var itemSelectorDialog = new A.LiferayItemSelectorDialog(  
                     {
-                        eventName: 'ItemSelectedEventName',
+                        eventName: 'sampleTestSelectItem',
                         on: {
                                 selectedItemChange: function(event) {
                                     var selectedItem = event.newVal;
 
                                     if (selectedItem) {
-                                        var itemValue = JSON.parse(
-                                        selectedItem.value
-                                        );
-                                        itemSrc = itemValue.url;
+                                       var itemValue = JSON.parse(JSON.stringify(selectedItem));
+                                        itemSrc = itemValue.value;//url
     
                                         <!-- use item as needed -->
                                     }
